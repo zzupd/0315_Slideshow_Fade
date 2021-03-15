@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Fade효과</title>
+    <style>
+        button {    font-size: 30px;   }
+
+        div {
+            width: 200px;
+            height: 400px;
+            font-size: 40px;
+            text-align: center;
+            line-height: 200px;
+            border: 1px solid #000;
+            margin: 40px;
+        }
+        div#test1 {
+            background-color: #08f;
+            margin-top: 87px;
+            position: absolute;
+        }
+        div#test2 {
+            background-color: #f80;
+            position: absolute;
+            top: 179px;
+            display: none;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+
+            $("button").click(function() {
+                $("div#test1").fadeOut(1000);
+                $("div#test2").fadeIn(2000);
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <h1>제이쿼리 페이드(fade) 애니메이션 효과</h1>
+    <button type="button">클릭!</button>
+    <div id="test1">Fade-Out 효과</div>
+    <div id="test2">Fade-In<br>효과</div>
+
+</body></html>
